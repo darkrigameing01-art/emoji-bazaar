@@ -2,89 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Emoji Bazaar | Advanced Digital Store</title>
+<title>Emoji Bazaar | Digital Emoji Store</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Premium emoji and sticker packs with instant download.">
+<meta name="description" content="Buy exclusive emoji and sticker packs. Instant digital download.">
+<link rel="stylesheet" href="style.css">
 
 <style>
-:root{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:#ffffff;
-  --accent:#6366f1;
-}
-
-body{
-  margin:0;
-  font-family:Arial;
-  background:var(--bg);
-  color:var(--text);
-}
-
-header{
-  padding:20px;
-  text-align:center;
-  background:#111827;
-  font-size:22px;
-  font-weight:bold;
-}
-
 .hero{
+  background: linear-gradient(135deg,#6c5ce7,#00cec9);
+  color:white;
+  padding:60px 20px;
   text-align:center;
-  padding:50px 20px;
-}
-
-.hero h1{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.container{
-  padding:20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:var(--card);
-  padding:20px;
   border-radius:12px;
-  text-align:center;
-  transition:0.3s;
+  margin:20px;
 }
 
-.card:hover{
-  transform:scale(1.05);
-}
-
-.card img{
-  width:80px;
-}
-
-button{
-  margin-top:10px;
+.download-btn{
+  background:#00b894;
+  color:white;
   padding:10px 15px;
   border:none;
   border-radius:6px;
-  background:var(--accent);
-  color:white;
   cursor:pointer;
 }
 
-button:hover{
-  background:#4f46e5;
+.download-btn:hover{
+  background:#019875;
 }
 
-.locked{
-  opacity:0.5;
-}
-
-footer{
+.section-title{
   text-align:center;
-  padding:20px;
-  background:#111827;
-  margin-top:30px;
+  margin:40px 0 20px;
 }
 </style>
 </head>
@@ -92,47 +40,71 @@ footer{
 <body>
 
 <header>
-Emoji Bazaar 🚀
+<h1>🛒 Emoji Bazaar</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#packs">Packs</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="hero">
-<h1>Premium Emoji & Sticker Store</h1>
-<p>Instant Download • Unique Designs • Global Access</p>
+<section class="hero" id="home">
+<h2>Exclusive Emoji & Sticker Packs</h2>
+<p>Instant Digital Download • Unique Designs • Global Access</p>
 </section>
+
+<h2 class="section-title">🔥 Free Sample Packs</h2>
+
+<section class="container" id="packs">
+
+<div class="products">
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f525.png" width="80">
+<h3>Fire Emoji Pack</h3>
+<p>High Quality Emojis</p>
+<a href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f525.png" download>
+<button class="download-btn">Download</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f60e.png" width="80">
+<h3>Cool Emoji Pack</h3>
+<p>Trending Style Emojis</p>
+<a href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f60e.png" download>
+<button class="download-btn">Download</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<h2 class="section-title">🔒 Premium Bundle (Coming Soon)</h2>
 
 <section class="container">
 
 <div class="card">
-<img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f525.png">
-<h3>Fire Pack</h3>
-<p>10 Premium Emojis</p>
-<button onclick="download()">Download</button>
+<h3>100+ Exclusive Emojis & Stickers</h3>
+<p>Premium Members Only</p>
+<button onclick="alert('Premium System Will Be Added Soon')">
+Unlock
+</button>
 </div>
 
-<div class="card">
-<img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f60e.png">
-<h3>Cool Pack</h3>
-<p>15 Premium Emojis</p>
-<button onclick="download()">Download</button>
-</div>
+</section>
 
-<div class="card locked">
-<h3>🔒 Premium Bundle</h3>
-<p>100+ Emojis & Stickers</p>
-<button onclick="alert('Premium Coming Soon')">Unlock</button>
-</div>
-
+<section class="container" id="contact">
+<h2 class="section-title">Contact Us</h2>
+<p style="text-align:center;">
+Email: support@emojibazaar.com
+</p>
 </section>
 
 <footer>
 © 2026 Emoji Bazaar | All Rights Reserved
 </footer>
-
-<script>
-function download(){
-  alert("Your download will start soon!");
-}
-</script>
 
 </body>
 </html>
